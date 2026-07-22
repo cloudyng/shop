@@ -1,7 +1,7 @@
 // ====== Cấu hình ======
 // Đổi thành URL Worker của bạn sau khi deploy, ví dụ:
 // const API_BASE = "https://sepay-shop-worker.your-account.workers.dev";
-const API_BASE = ""; // để trống nếu Worker phục vụ cùng domain
+const API_BASE = "https://minishop-demo-cloudy-worker.anntuongg.workers.dev"; // để trống nếu Worker phục vụ cùng domain
 
 // ====== Dữ liệu sản phẩm (demo) ======
 const PRODUCTS = [
