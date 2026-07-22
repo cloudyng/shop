@@ -6,7 +6,7 @@ compatibility_flags = ["nodejs_compat"]
 # Biến công khai (KHÔNG để secret ở đây)
 [vars]
 SEPAY_ENV = "sandbox"
-SITE_URL = "https://minishop-demo-cloudyng.pages.dev"   # đổi thành domain frontend của bạn
+SITE_URL = "https://minishop-demo-cloudy.pages.dev"   # đổi thành domain frontend của bạn
 
 # KV lưu trạng thái đơn hàng.
 # Tạo bằng: npx wrangler kv namespace create ORDERS
