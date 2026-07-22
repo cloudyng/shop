@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniShop — Cửa hàng trực tuyến</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🛍️</span>
+      <span>MiniShop</span>
+    </div>
+    <div class="actions">
+      <button id="themeToggle" class="icon-btn" title="Chuyển giao diện sáng/tối" aria-label="Chuyển giao diện">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button id="cartToggle" class="icon-btn" title="Giỏ hàng" aria-label="Giỏ hàng">
+        🛒 <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Sản phẩm nổi bật</h1>
+    <div id="productGrid" class="grid"></div>
+  </main>
+
+  <!-- Cart drawer -->
+  <div id="overlay" class="overlay hidden"></div>
+  <aside id="cartDrawer" class="drawer">
+    <div class="drawer-head">
+      <h2>Giỏ hàng</h2>
+      <button id="cartClose" class="icon-btn" aria-label="Đóng">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="drawer-foot">
+      <div class="total-row">
+        <span>Tổng cộng</span>
+        <strong id="cartTotal">0₫</strong>
+      </div>
+      <button id="checkoutBtn" class="btn-primary" disabled>Thanh toán qua SePay</button>
+      <p class="hint">Bạn sẽ được chuyển tới cổng thanh toán an toàn của SePay.</p>
+    </div>
+  </aside>
+
+  <!-- Checkout status modal -->
+  <div id="statusModal" class="modal hidden">
+    <div class="modal-card">
+      <div id="statusIcon" class="status-icon">⏳</div>
+      <h3 id="statusTitle">Đang xử lý...</h3>
+      <p id="statusMsg"></p>
+      <button id="statusClose" class="btn-primary">Đóng</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

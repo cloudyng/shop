@@ -1,0 +1,20 @@
+name = "sepay-shop-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Biến công khai (KHÔNG để secret ở đây)
+[vars]
+SEPAY_ENV = "sandbox"
+SITE_URL = "https://your-shop.pages.dev"   # đổi thành domain frontend của bạn
+
+# KV lưu trạng thái đơn hàng.
+# Tạo bằng: npx wrangler kv namespace create ORDERS
+# rồi dán id vào đây.
+[[kv_namespaces]]
+binding = "ORDERS"
+id = "REPLACE_WITH_YOUR_KV_ID"
+
+# Secret (KHÔNG viết trong file này). Đặt bằng lệnh:
+#   npx wrangler secret put SEPAY_MERCHANT_ID
+#   npx wrangler secret put SEPAY_SECRET_KEY
