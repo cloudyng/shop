@@ -6,14 +6,14 @@ compatibility_flags = ["nodejs_compat"]
 # Biến công khai (KHÔNG để secret ở đây)
 [vars]
 SEPAY_ENV = "sandbox"
-SITE_URL = "https://your-shop.pages.dev"   # đổi thành domain frontend của bạn
+SITE_URL = "https://minishop-demo-cloudyng.pages.dev"   # đổi thành domain frontend của bạn
 
 # KV lưu trạng thái đơn hàng.
 # Tạo bằng: npx wrangler kv namespace create ORDERS
 # rồi dán id vào đây.
 [[kv_namespaces]]
 binding = "ORDERS"
-id = "REPLACE_WITH_YOUR_KV_ID"
+id = "e43e617126834d81bc7955033afbfb44"
 
 # Secret (KHÔNG viết trong file này). Đặt bằng lệnh:
 #   npx wrangler secret put SEPAY_MERCHANT_ID
